@@ -13,11 +13,12 @@ export const ItemPaisElemento = ({
   country,
   population,
   capital,
-  region
+  region,
+  selecionado
 }: ItemPaisTipo) => {
   return (
     <ItemPais>
-      <ContainerImagem>
+      <ContainerImagem onClick={selecionado}>
         <FotoPais src={endereco} alt="imagem" />
       </ContainerImagem>
       <ContainerTexto>

@@ -20,6 +20,7 @@ export type ItemPaisTipo = {
   population: string
   region: string
   capital: string
+  selecionado: any
 }
 
 export const ContainerImagem = styled.div`

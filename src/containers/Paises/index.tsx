@@ -2,7 +2,7 @@ import { ContainerPaises, api } from './style'
 import React, { useState, useEffect } from 'react'
 import ItemPaisElemento from '../../components/PaisItem'
 
-export const Paises = () => {
+export const Paises = ({ selecionei }: any) => {
   const [countries, setCountries] = useState([])
   useEffect(() => {
     fetch('countryes.json')
@@ -24,6 +24,7 @@ export const Paises = () => {
       {countries.map((pais: api) => {
         return (
           <ItemPaisElemento
+            selecionado={selecionei}
             population={pais.population}
             capital={pais.capital}
             region={pais.region}
